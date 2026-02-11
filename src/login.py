@@ -9,8 +9,20 @@ def main(page: ft.Page):
     page.on_keyboard_event = on_keyboard
 
     page.add(
-    ft.Text("Bem-vindo ao Flet!", size=30, color=ft.Colors.BLUE, )
-    
+       ft.Stack(
+        expand=True,
+        controls=[
+            ft.Container(
+                width=200,
+                height=100,
+                bgcolor=ft.Colors.RED,
+                content=ft.Text("Topo direita", text_align=ft.TextAlign.CENTER),
+                top=20,
+                right=30,
+            )
+        ],
+    )
+        
     )
 
   
